@@ -1,0 +1,17 @@
+# Gradle / Java
+.gradle/
+build/
+android/build/
+local.properties
+*.class
+*.log
+
+# Build artifacts
+*.apk
+*.aab
+
+# IDE
+.idea/
+*.iml
+.vscode/
+.DS_Store

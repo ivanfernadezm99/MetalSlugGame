@@ -1,0 +1,3 @@
+rootProject.name = 'MetalSlugGame'
+include ':android'
+project(':android').projectDir = new File('android')

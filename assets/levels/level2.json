@@ -1,0 +1,60 @@
+{
+  "name": "Nivel 2 - Base Militar",
+  "width": 800,
+  "height": 600,
+  "background": "assets/backgrounds/level2.png",
+  "music": "assets/music/battle_heavy_01.ogg",
+  "obstacles": [
+    {
+      "type": "wall",
+      "x": 150,
+      "y": 380,
+      "width": 80,
+      "height": 220
+    },
+    {
+      "type": "platform",
+      "x": 300,
+      "y": 300,
+      "width": 200,
+      "height": 20
+    },
+    {
+      "type": "wall",
+      "x": 580,
+      "y": 400,
+      "width": 80,
+      "height": 200
+    }
+  ],
+  "enemies": [
+    {
+      "type": "basic",
+      "x": 250,
+      "y": 380,
+      "health": 50
+    },
+    {
+      "type": "basic",
+      "x": 400,
+      "y": 300,
+      "health": 50
+    },
+    {
+      "type": "advanced",
+      "x": 600,
+      "y": 400,
+      "health": 100
+    },
+    {
+      "type": "basic",
+      "x": 700,
+      "y": 380,
+      "health": 50
+    }
+  ],
+  "playerStart": {
+    "x": 100,
+    "y": 400
+  }
+}

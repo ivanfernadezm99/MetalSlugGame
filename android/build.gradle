@@ -1,0 +1,66 @@
+apply plugin: 'com.android.application'
+
+android {
+    namespace 'com.metal.slug.game'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.metal.slug.game"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        ndkVersion "25.1.8937393"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+    
+    java {
+        toolchain {
+            languageVersion = JavaLanguageVersion.of(17)
+        }
+    }
+
+    packagingOptions {
+        pickFirst 'lib/arm64-v8a/libbackend.so'
+        pickFirst 'lib/armeabi-v7a/libbackend.so'
+        pickFirst 'lib/x86/libbackend.so'
+        pickFirst 'lib/x86_64/libbackend.so'
+    }
+
+    sourceSets {
+        main {
+            java {
+                srcDirs = ['src/main/java', '../src']
+                exclude '**/game/Main.java'
+            }
+            res {
+                srcDirs = ['src/main/res']
+            }
+            manifest {
+                srcFile 'src/main/AndroidManifest.xml'
+            }
+            assets {
+                srcDirs = ['../assets']
+            }
+        }
+    }
+}
+
+dependencies {
+    implementation 'com.badlogicgames.gdx:gdx:1.12.0'
+    implementation 'com.badlogicgames.gdx:gdx-backend-android:1.12.0'
+    implementation 'com.badlogicgames.gdx:gdx-box2d:1.12.0'
+    implementation 'com.badlogicgames.gdx:gdx-freetype:1.12.0'
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Nivel 3 - Jefe Final",
+  "width": 800,
+  "height": 600,
+  "background": "assets/backgrounds/level3.png",
+  "music": "assets/music/battle_heavy_02.ogg",
+  "obstacles": [
+    {
+      "type": "wall",
+      "x": 100,
+      "y": 350,
+      "width": 60,
+      "height": 250
+    },
+    {
+      "type": "platform",
+      "x": 250,
+      "y": 280,
+      "width": 300,
+      "height": 20
+    },
+    {
+      "type": "wall",
+      "x": 650,
+      "y": 350,
+      "width": 60,
+      "height": 250
+    }
+  ],
+  "enemies": [
+    {
+      "type": "advanced",
+      "x": 300,
+      "y": 280,
+      "health": 100
+    },
+    {
+      "type": "advanced",
+      "x": 500,
+      "y": 280,
+      "health": 100
+    },
+    {
+      "type": "basic",
+      "x": 400,
+      "y": 450,
+      "health": 50
+    }
+  ],
+  "playerStart": {
+    "x": 100,
+    "y": 400
+  }
+}
